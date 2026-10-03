@@ -1,0 +1,20 @@
+{
+  "card": {
+    "name": "ISO/IEC 7810 ID-1 card",
+    "width_mm": 85.60,
+    "height_mm": 53.98
+  },
+  "coins": [
+    { "id": "us_quarter", "name": "US Quarter (25c)", "country": "United States", "diameter_mm": 24.26 },
+    { "id": "us_penny", "name": "US Penny (1c)", "country": "United States", "diameter_mm": 19.05 },
+    { "id": "us_nickel", "name": "US Nickel (5c)", "country": "United States", "diameter_mm": 21.21 },
+    { "id": "us_dime", "name": "US Dime (10c)", "country": "United States", "diameter_mm": 17.91 },
+    { "id": "eur_1", "name": "1 Euro", "country": "Eurozone", "diameter_mm": 23.25 },
+    { "id": "eur_2", "name": "2 Euro", "country": "Eurozone", "diameter_mm": 25.75 },
+    { "id": "gbp_1", "name": "1 Pound", "country": "United Kingdom", "diameter_mm": 23.03 },
+    { "id": "ngn_1", "name": "1 Naira", "country": "Nigeria", "diameter_mm": 17.0 },
+    { "id": "ngn_2", "name": "2 Naira", "country": "Nigeria", "diameter_mm": 19.0 },
+    { "id": "cad_1", "name": "1 Dollar (Loonie)", "country": "Canada", "diameter_mm": 26.5 },
+    { "id": "custom", "name": "Custom coin (enter diameter)", "country": "Any", "diameter_mm": null }
+  ]
+}
