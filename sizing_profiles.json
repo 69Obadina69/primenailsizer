@@ -1,0 +1,12 @@
+{
+  "standard": {
+    "label": "Standard Press-On Sizing (example — configurable per business)",
+    "sizes": {
+      "XS": { "min_width_mm": 7.0,  "max_width_mm": 9.0 },
+      "S":  { "min_width_mm": 9.0,  "max_width_mm": 11.0 },
+      "M":  { "min_width_mm": 11.0, "max_width_mm": 13.0 },
+      "L":  { "min_width_mm": 13.0, "max_width_mm": 15.0 },
+      "XL": { "min_width_mm": 15.0, "max_width_mm": 18.0 }
+    }
+  }
+}
