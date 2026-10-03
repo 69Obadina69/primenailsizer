@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NailSizer — Measure</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- PANEL: choose reference object -->
+<div class="screen" id="panel-reference">
+  <a class="link-back" href="index.html">&larr; Back</a>
+  <h1 id="ref-hand-title">Choose Your Reference</h1>
+  <p class="subtitle">Pick the object you'll place beside your nails. Any of these work.</p>
+
+  <div class="reference-option" data-ref="credit_card">
+    <div class="icon">💳</div>
+    <div><div class="label">Credit / Debit Card</div><div class="desc">Most accurate — standard size, detected automatically</div></div>
+  </div>
+  <div class="reference-option" data-ref="coin">
+    <div class="icon">🪙</div>
+    <div><div class="label">Coin</div><div class="desc">Select your coin from a list</div></div>
+  </div>
+  <div class="reference-option" data-ref="bottle_cap">
+    <div class="icon">🧴</div>
+    <div><div class="label">Bottle Cap</div><div class="desc">Enter its measured diameter</div></div>
+  </div>
+  <div class="reference-option" data-ref="custom">
+    <div class="icon">📏</div>
+    <div><div class="label">Custom Object</div><div class="desc">Enter width &amp; height in mm</div></div>
+  </div>
+
+  <div id="ref-extra-fields" style="margin-top:8px;"></div>
+
+  <div class="spacer"></div>
+  <button class="btn btn-primary" id="ref-continue" disabled>Continue</button>
+</div>
+
+<!-- PANEL: instructions -->
+<div class="screen hidden" id="panel-instructions">
+  <a class="link-back" href="#" onclick="goToPanel('panel-reference');return false;">&larr; Back</a>
+  <h1 id="instr-title">Upload Left Hand</h1>
+  <p class="subtitle">A few tips for the most accurate measurement:</p>
+  <ul class="instructions">
+    <li><span class="dot">1</span>Place your hand flat, palm down.</li>
+    <li><span class="dot">2</span>Place your reference object directly beside your fingers, on the same flat surface.</li>
+    <li><span class="dot">3</span>All five fingers and nails must be visible.</li>
+    <li><span class="dot">4</span>Keep the camera directly above your hand.</li>
+    <li><span class="dot">5</span>Use bright, even lighting — avoid harsh glare.</li>
+  </ul>
+  <div class="spacer"></div>
+  <button class="btn btn-primary" onclick="goToPanel('panel-capture')">Got It</button>
+</div>
+
+<!-- PANEL: capture / upload -->
+<div class="screen hidden" id="panel-capture">
+  <a class="link-back" href="#" onclick="goToPanel('panel-instructions');return false;">&larr; Back</a>
+  <h1 id="capture-title">Upload Left Hand</h1>
+  <p class="subtitle">Choose a photo or take one now.</p>
+
+  <img id="preview-img" class="preview-img hidden" alt="Preview">
+
+  <label class="upload-box" id="upload-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M12 4l-5 5M12 4l5 5"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
+    <div class="upload-title">Choose Image</div>
+    <div class="upload-hint">or drag and drop</div>
+    <input type="file" accept="image/*" capture="environment" id="file-input">
+  </label>
+
+  <div id="capture-error" class="error-banner hidden"></div>
+
+  <div class="spacer"></div>
+  <button class="btn btn-primary" id="capture-continue" disabled>Continue</button>
+</div>
+
+<!-- PANEL: processing -->
+<div class="screen hidden" id="panel-processing">
+  <div class="processing-wrap">
+    <div class="spinner-ring"></div>
+    <div class="processing-message" id="processing-message">Uploading…</div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/camera.js"></script>
+</body>
+</html>
