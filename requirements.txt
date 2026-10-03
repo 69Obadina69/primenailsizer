@@ -1,0 +1,18 @@
+# Core (installed & verified working in this environment)
+Flask==3.1.3
+opencv-python==4.13.0.86
+mediapipe==0.10.33
+numpy==2.4.4
+Pillow
+
+# Spec called for FastAPI + Uvicorn + Pydantic. They were NOT available to
+# install in the sandbox used to build this (no network access), so Flask
+# was substituted — see README.md "Known limitations". To migrate:
+# fastapi
+# uvicorn
+# pydantic
+# python-multipart
+
+pytest  # not available in the build sandbox either; tests run as plain
+        # scripts (python3 tests/test_*.py) but are pytest-compatible —
+        # `pytest tests/` will work once pytest is installed.
